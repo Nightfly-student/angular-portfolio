@@ -1,0 +1,48 @@
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+  <a
+    *ngFor="let project of projectService.getProjectById(categoryID)"
+    [href]="project.url"
+    target="_blank"
+    class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-white transform hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+  >
+    <!-- Image -->
+    <img
+      class="card-img-top rounded-tl-2xl w-full"
+      [src]="project.screenshot"
+      crossorigin
+    />
+
+    <!-- Shape -->
+    <div class="relative">
+      <div
+        class="absolute pointer-events-none bottom-full w-full bg-blue-800 text-white"
+      >
+        <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+          <svg
+            viewBox="0 0 100 50"
+            preserveAspectRatio="none"
+            class="absolute bottom-0 w-full h-full tranform"
+            style="transform-origin: top center; transform: scale(2)"
+          >
+            <path d="M0 25h25L75 0h25v50H0z" fill="#FFFFFF"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="p-8">
+      <!-- Heading -->
+      <h2 class="text-3xl mb-2">{{ project.name }}</h2>
+
+      <!-- Name & Date -->
+      <p class="mb-0">
+        {{ project.description }}
+      </p>
+      <p class="mt-2">
+        Tools Used: <span class="font-semibold">{{project.languages}}</span>
+      </p>
+      <a class="text-2xl text-blue-700 hover:text-blue-800" *ngIf="project.github" [href]="project.github"><fa-icon [icon]="faGithubAlt"></fa-icon></a>
+    </div>
+  </a>
+</div>
