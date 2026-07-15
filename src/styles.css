@@ -2,10 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ink: #0a0a0b;
+  --ink-2: #101012;
+  --paper: #f1f0ec;
+  --paper-2: #e8e7e1;
+  --accent: #ff6a1a;
+  --accent-soft: rgba(255, 106, 26, 0.14);
+  --line-dark: rgba(255, 255, 255, 0.1);
+  --line-light: rgba(12, 12, 14, 0.1);
+}
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  background-color: var(--ink);
 }
 
 body {
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--ink);
+  color: #f4f3f0;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: "Sora", "Inter", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+}
+
+.sec-dark {
+  background: var(--ink);
+  color: #f4f3f0;
+}
+
+.sec-light {
+  background: var(--paper);
+  color: #0d0d0f;
+}
+
+.muted {
+  color: color-mix(in srgb, currentColor 62%, transparent);
+}
+
+.muted-2 {
+  color: color-mix(in srgb, currentColor 45%, transparent);
+}
+
+.hair {
+  border-color: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.card {
+  background: color-mix(in srgb, currentColor 4%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 11%, transparent);
+}
+
+.card-hover:hover {
+  border-color: color-mix(in srgb, currentColor 26%, transparent);
+  background: color-mix(in srgb, currentColor 7%, transparent);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.6;
+}
+
+.eyebrow::before {
+  content: "";
+  height: 0.4rem;
+  width: 0.4rem;
+  border-radius: 9999px;
+  background: var(--accent);
+}
+
+::selection {
+  background-color: rgba(255, 106, 26, 0.32);
+  color: #fff;
 }

@@ -11,9 +11,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TabComponent } from './shared/tab/tab.component';
 import { TabContainerComponent } from './shared/tab-container/tab-container.component';
 import { FooterComponent } from './footer/footer.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, ProjectsComponent, TabComponent, TabContainerComponent, FooterComponent],
+  declarations: [AppComponent, NavComponent, ProjectsComponent, TabComponent, TabContainerComponent, FooterComponent, TimelineComponent],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),

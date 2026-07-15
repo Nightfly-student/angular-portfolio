@@ -1,198 +1,164 @@
-<!-- nav -->
 <app-nav></app-nav>
 
-<!-- Header -->
-
-<section class="bg-sky-50 pt-40 overflow-hidden">
-  <div class="container mx-auto">
-    <div class="pt-20">
-      <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-2">
-        <div class="p-2">
-          <div class="w-fit m-auto lg:m-0 mb-20 lg:mb-0">
-            <h1
-              class="text-7xl font-bold relative z-10 text-center lg:text-left"
-            >
-              Hi I'm Jelle
-            </h1>
-            <h1
-              class="text-7xl text-center lg:text-left font-bold relative z-10"
-            >
-              Toonen
-            </h1>
-            <div class="z-0">
-              <svg
-                viewBox="0 0 200 200"
-                class="absolute motion-safe:animate-bounce object-cover top-0 mt-40 md:ml-20 sm:ml-10 h-96 w-128"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill="#BAE6FF"
-                  d="M53.6,-42.9C63.8,-29.9,62.6,-8,55.6,8.8C48.6,25.5,36,36.9,20.4,45.8C4.8,54.6,-13.7,60.7,-30.8,55.6C-48,50.6,-63.8,34.4,-66.5,16.8C-69.3,-0.9,-59.1,-19.9,-45.8,-33.6C-32.6,-47.2,-16.3,-55.6,2.7,-57.7C21.7,-59.9,43.4,-55.9,53.6,-42.9Z"
-                  transform="translate(100 100)"
-                />
-              </svg>
-            </div>
-            <p
-              class="mt-4 text-xl text-gray-600 z-10 relative text-center lg:text-left"
-            >
-              IT Student at Inholland Haarlem. <br />Learning Front-end
-              Development, Back-end Development,<br />
-              SEO & more
-            </p>
-            <a
-            href="#about"
-              class="rounded-lg bg-sky-400 text-white p-3 w-fit text-2xl hover:bg-sky-500 mt-4 lg:mt-2 block mx-auto lg:mx-0"
-            >
-              Learn More
-          </a>
-            <div>
-              <div class="mt-10 text-center lg:text-left">
-                <a href="https://www.linkedin.com/in/jelle-toonen-a99448138/">
-                  <fa-icon
-                    class="text-3xl text-sky-400 mr-5 hover:text-sky-500 hover:cursor-pointer"
-                    [icon]="faLinkedinIn"
-                  ></fa-icon>
-                </a>
-                <a href="https://github.com/Nightfly-student/">
-                  <fa-icon
-                    class="text-3xl text-sky-400 hover:text-sky-500 hover:cursor-pointer"
-                    [icon]="faGithubAlt"
-                  ></fa-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="p-2 relative lg:block hidden">
-          <div>
-            <!-- Floating Components -->
-            <div>
-              <div
-                class="floating-component-up rounded z-20 p-1 w-fit absolute top-0 bg-gray-50"
-              >
-                <p class="text-sky-500 text-xl">Vuejs & Nuxt 3</p>
-              </div>
-              <div
-                class="floating-component-down rounded z-20 p-1 w-fit absolute ml-80 mt-10 bg-gray-50"
-              >
-                <p class="text-sky-500 text-xl">MongoDB & Firebase</p>
-              </div>
-              <div
-                class="floating-component-down rounded p-1 z-20 w-fit absolute bottom-0 mb-40 bg-gray-50"
-              >
-                <p class="text-sky-700 text-xl">React & Next</p>
-              </div>
-              <div
-                class="floating-component-down rounded p-1 z-20 w-fit absolute right-0 bottom-0 mb-40 bg-gray-50"
-              >
-                <p class="text-sky-500 text-xl">Angular</p>
-              </div>
-              <div
-                class="floating-component-up rounded p-1 z-20 w-fit absolute top-0 mt-10 right-0 bg-gray-50"
-              >
-                <p class="text-sky-700 text-xl">ExpressJS</p>
-              </div>
-            </div>
-
-            <!-- Me -->
-            <div>
-              <img
-                class="relative z-10 pos-img"
-                src="https://res.cloudinary.com/droomsocial/image/upload/v1661512032/test3_kletmn.png"
-                crossorigin
-              />
-              <svg
-                viewBox="0 0 200 200"
-                class="absolute top-0 z-0 minus-mb"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill="#0F62FE"
-                  d="M65.1,-40.5C79.7,-33.6,83.7,-6.8,72.6,6.6C61.6,19.9,35.6,19.9,18.3,22.1C1,24.2,-7.5,28.7,-22.7,28.5C-37.9,28.3,-59.8,23.5,-67.8,9.4C-75.9,-4.7,-70.1,-28,-56.5,-34.7C-42.9,-41.3,-21.4,-31.4,1.9,-32.9C25.3,-34.4,50.5,-47.4,65.1,-40.5Z"
-                  transform="translate(100 100)"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- Hero -->
+<section class="hero sec-dark relative overflow-hidden min-h-[100svh] flex flex-col pt-28 sm:pt-32 pb-10 sm:pb-16 sm:rounded-b-[2rem]">
+  <!-- Desktop / tablet cinematic background -->
+  <div class="hero-bg hero-bg--desktop pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+    <img
+      src="assets/images/hero-background.png"
+      alt=""
+      class="hero-bg__image absolute inset-0 h-full w-full object-cover"
+    />
+    <img
+      src="assets/images/founder-portrait.png"
+      alt=""
+      class="hero-bg__portrait absolute bottom-0 right-0 h-[72svh] sm:h-[88svh] w-auto max-w-[min(72vw,34rem)] sm:max-w-[min(52vw,42rem)] object-cover object-top"
+    />
+    <div class="hero-vignette absolute inset-0"></div>
   </div>
-</section>
 
-<div class="triangle"></div>
-<section class="pb-40 bg-blue-600 pt-20">
-  <h2 class="text-4xl text-white font-bold text-center">Latest Projects</h2>
-  <div class="p-4">
-    <app-projects categoryID="latest" [limit]="3"></app-projects>
+  <!-- Mobile: full-bleed background + portrait -->
+  <div class="hero-bg hero-bg--mobile pointer-events-none absolute inset-0 overflow-hidden sm:hidden" aria-hidden="true">
+    <img
+      src="assets/images/hero-background.png"
+      alt=""
+      class="hero-bg__image absolute inset-0 h-full w-full object-cover"
+    />
+    <img
+      src="assets/images/founder-portrait.png"
+      alt=""
+      class="hero-bg__portrait hero-bg__portrait--mobile absolute object-cover object-top"
+    />
+    <div class="hero-vignette hero-vignette--mobile absolute inset-0"></div>
   </div>
-</section>
 
-<section class="bg-sky-50" id="about">
-  <div class="container mx-auto pt-20 pb-40">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
-      <div class="relative hidden lg:block">
-        <img class="relative z-10" src="https://res.cloudinary.com/droomsocial/image/upload/v1661512030/portfolio_smos8h.png" crossorigin/>
-        <svg
-          viewBox="0 0 200 200"
-          class="absolute top-0 z-0"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill="#BAE6FF"
-            d="M65.8,-47C80.2,-34.5,83.2,-7.4,74.6,11.8C66,30.9,45.9,42.2,28.1,46.1C10.2,50,-5.2,46.5,-22.1,40.5C-39,34.4,-57.3,25.8,-59.9,13.8C-62.6,1.7,-49.7,-13.8,-37.1,-26C-24.5,-38.1,-12.3,-46.9,6.7,-52.3C25.7,-57.6,51.5,-59.6,65.8,-47Z"
-            transform="translate(100 100)"
-          />
-        </svg>
-      </div>
+  <div class="relative flex-1 max-w-[92rem] mx-auto w-full px-5 sm:px-10 lg:px-16 flex flex-col justify-end">
+    <div class="hero-content max-w-2xl sm:max-w-none space-y-7 pb-2 sm:pb-0">
       <div>
-        <div class="p-4 lg:p-2">
-          <h2 class="text-5xl font-bold text-center mb-3">About me</h2>
-          <p class="text-xl text-gray-600">
-            Welcome to my portfolio site. My name is Jelle and I am a student at
-            Inholland. I am looking to pursuit my dream as Developer. I am a
-            fast learner and a fast worker, this means I am worth every minute
-            at work. Most people know me as a direct person, and sometimes
-            stubborn, but... they also call me a altruistic person, this means I
-            always help out others before I solve my own problems.
-          </p>
-          <p class="text-xl text-gray-600 mt-3">
-            In my freetime you can find me often behind my pc, making projects,
-            listening to music or playing video games. However, this is not the
-            only thing I enjoy in my free time. I love to travel and see more of
-            the world, but I also love to hike in the mountains, and go almost
-            every year to the alphs to do it.
-          </p>
-          <p class="text-xl text-gray-600 mt-3">
-            My personal skills are that I am always on time and never make loose
-            ends on my projects. I am a fast learner and worker. I work best on
-            myself. My programming and coding skills are, C#, Java, HTML, CSS,
-            PHP, React, NextJS, ExpressJS, VueJs, Nuxt3, Angular.
-          </p>
+        <p class="eyebrow mb-4">Founder & Engineer</p>
+        <h1 class="hero-title font-display font-bold text-white leading-[0.88] text-[clamp(3rem,12vw,7.5rem)]">
+          Jelle Toonen
+        </h1>
+        <p class="mt-5 max-w-lg text-lg sm:text-xl text-white/70 leading-relaxed">
+          I build and scale marketplaces, SaaS products, and software for founders, directly and without agency overhead.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+        <a
+          href="https://nightdev.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent/90 transition-colors"
+        >
+          Visit NightDev
+        </a>
+        <a
+          href="#timeline"
+          class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/80 hover:border-white/40 hover:text-white transition-colors"
+        >
+          See my work
+        </a>
+      </div>
+
+      <div class="flex items-center gap-4 pt-1">
+        <a
+          href="https://www.linkedin.com/in/jelle-toonen-a99448138/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white/50 hover:text-accent transition-colors"
+          aria-label="LinkedIn"
+        >
+          <fa-icon [icon]="faLinkedinIn" class="text-2xl"></fa-icon>
+        </a>
+        <a
+          href="https://github.com/Nightfly-student/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white/50 hover:text-accent transition-colors"
+          aria-label="GitHub"
+        >
+          <fa-icon [icon]="faGithubAlt" class="text-2xl"></fa-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="sec-light py-20 lg:py-28 -mt-6 rounded-t-[2rem]">
+  <div class="max-w-[92rem] mx-auto px-6 sm:px-10 lg:px-16">
+    <div class="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-x-14">
+      <div class="lg:col-span-5">
+        <p class="eyebrow mb-5">About</p>
+        <h2 class="font-display text-3xl sm:text-4xl leading-[1.08] tracking-tight">
+          Built by someone who's shipped their own products.
+        </h2>
+      </div>
+
+      <div class="lg:col-span-7 space-y-5">
+        <p class="text-lg leading-relaxed muted">
+          I've spent the last several years building and operating my own online businesses: marketplaces, SaaS products, and high-traffic platforms. That means I've already navigated the product decisions, infrastructure, payments, SEO, and scaling headaches you're about to hit.
+        </p>
+        <p class="text-lg leading-relaxed muted">
+          In 2023 I started NightDev to bring that experience directly to founders. When we work together, you get strategy and execution in one place, not filtered through account managers.
+        </p>
+
+        <div class="flex flex-wrap gap-2 pt-2">
+          <span
+            *ngFor="let highlight of highlights"
+            class="inline-flex items-center gap-1.5 rounded-full card px-3.5 py-2 text-sm"
+          >
+            <span class="text-accent">✓</span>
+            {{ highlight }}
+          </span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="pb-40 bg-blue-600 pt-20" id="portfolio">
-  <h2 class="text-4xl text-white font-bold text-center">Portfolio</h2>
-  <div class="m-2">
-    <app-tabs-container>
-      <app-tab tabTitle="Websites">
-        <app-projects categoryID="Websites" [scrollable]="true" [limit]="6"></app-projects>
-      </app-tab>
-      <app-tab tabTitle="Games">
-        <app-projects categoryID="Games" [limit]="6"></app-projects>
-      </app-tab>
-      <app-tab tabTitle="Unfinished">
-        <app-projects categoryID="Unfinished" [limit]="6"></app-projects>
-      </app-tab>
-      <app-tab tabTitle="Apps">
-        <app-projects categoryID="Apps" [limit]="6"></app-projects>
-      </app-tab>
-    </app-tabs-container>
+<!-- Education -->
+<section id="education" class="sec-dark py-20 lg:py-28">
+  <div class="max-w-[92rem] mx-auto px-6 sm:px-10 lg:px-16">
+    <p class="eyebrow mb-4">Education</p>
+    <h2 class="font-display text-3xl sm:text-4xl leading-[1.08] tracking-tight mb-10">
+      Schooling & background.
+    </h2>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <article
+        *ngFor="let item of education"
+        class="rounded-2xl card p-5 sm:p-6 flex flex-col"
+      >
+        <p class="text-xs uppercase tracking-wider muted mb-2">{{ item.period }}</p>
+        <h3 class="font-display text-xl">{{ item.school }}</h3>
+        <p class="mt-1 text-sm font-medium text-white/80">{{ item.degree }}</p>
+        <p *ngIf="item.note" class="mt-2 text-sm muted">{{ item.note }}</p>
+        <div *ngIf="item.skills?.length" class="mt-4 flex flex-wrap gap-2">
+          <span
+            *ngFor="let skill of item.skills"
+            class="text-xs px-2.5 py-1 rounded-full border border-white/15 text-white/70"
+          >
+            {{ skill }}
+          </span>
+        </div>
+      </article>
+    </div>
+
+    <p class="mt-8 text-sm muted">
+      <a
+        href="https://www.linkedin.com/in/jelle-toonen/details/education/?locale=en"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-accent hover:text-accent/80 transition-colors"
+      >
+        View full education on LinkedIn →
+      </a>
+    </p>
   </div>
 </section>
+
+<app-timeline></app-timeline>
 
 <app-footer></app-footer>
