@@ -27,9 +27,9 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
   {
     title: "Racoon",
     description:
-      "Modern gaming marketplace MVP with secure buyer/seller flows and seller dashboards.",
+      "Lead developer on a modern gaming marketplace MVP with secure buyer/seller flows and seller dashboards.",
     url: "https://racoon.gg",
-    tags: ["Gaming", "Marketplace"],
+    tags: ["Lead Developer", "Gaming", "Marketplace"],
   },
   {
     title: "CoachIQ",
